@@ -1,0 +1,9 @@
+.title {
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  color: #212529;
+  width: 30%;
+  box-shadow: 1px 1px 4px 0px #ccc;
+  margin: 0 auto;
+}
