@@ -9,10 +9,6 @@ const initialState = {
     pricea: 0,
     category: null
   },
-  // signedUser: {
-  //   token: null,
-  //   user: null
-  // },
   logedInUserData:null,
   authorization: null,
   addedProducts: []

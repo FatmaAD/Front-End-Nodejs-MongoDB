@@ -21,7 +21,7 @@ const product = (props) => {
                     </div>
                 </a>
                 <div className="crud-actions">
-                    <NavLink to={props.id} onClick={props.view} href="#"><i className="far fa-eye"></i></NavLink>
+                    <NavLink to={props.id} onClick={props.view}><i className="far fa-eye"></i></NavLink>
                     {trash}
                 </div>
             </div>

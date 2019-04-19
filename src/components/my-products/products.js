@@ -13,12 +13,14 @@ class MyProuducts extends Component {
   componentDidMount() {
     const userID = localStorage.getItem("user-id");
     this.props.getAll(userID);
-    console.log("the props in my app",this.props.addedProducts)
   }
-
+  
   render() {
+    console.log("the props in my app",this.props.addedProducts)
+
+
     let ps = <h1 className="title"> Nothing To Show Yet </h1>;
-    if (this.props.addedProducts != null) {      
+    if (this.props.addedProducts.length > 0) {      
       ps = this.props.addedProducts.map(product => (
         <Product
           key={product.id}
