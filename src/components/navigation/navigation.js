@@ -144,7 +144,7 @@ class Navigation extends Component {
             </a>
             {/* <!-- user options --> */}
             <div className="header__user-options">
-              {usr}
+             <strong> {usr} </strong> 
               {/* <!-- shopping card dropdown --> */}
               {/* <!-- dropdown--opened to open --> */}
               <div className="dropdown dropdown--left  ">

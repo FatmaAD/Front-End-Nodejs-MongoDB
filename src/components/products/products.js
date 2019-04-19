@@ -12,6 +12,7 @@ const Products = props => {
       img={product.image}
       priceb={product.priceb}
       pricea={product.pricea}
+      addedBy={product.addedBy}
       del={() => props.del(product.id)}
       view={() => props.showMore(product.id)}
       id={`products/${product.id}`}

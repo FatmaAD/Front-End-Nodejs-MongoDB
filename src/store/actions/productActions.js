@@ -15,7 +15,8 @@ export const getAll = () => {
             pricea: res.data[key].pricea,
             priceb: res.data[key].priceb,
             discription: res.data[key].discription,
-            category: res.data[key].category
+            category: res.data[key].category,
+            addedBy: res.data[key].addedBy
           });
         }
         return dispatch({
@@ -55,6 +56,9 @@ export const getuserProducts = userid => {
 export const remove = id => {
   return dispatch => {
     Axios.delete(`${baseUrl}/products/${id}`, {
+      headers:{
+        Authorization: localStorage.getItem("token")
+      }
     })
       .then(res => {
         return dispatch({

@@ -28,6 +28,7 @@ class MyProuducts extends Component {
           img={product.image}
           priceb={product.priceb}
           pricea={product.pricea}
+          addedBy={product.addedBy}
           del={() => this.props.del(product._id)}
           view={() => this.props.showMore(product._id)}
           id={`products/${product._id}`}
