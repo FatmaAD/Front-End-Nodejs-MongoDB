@@ -37,7 +37,6 @@ class addForm extends Component {
       disc.disabled = true;
     } else {
       disc.disabled = false;
-      // this.setState({ priceb: this.state.pricea + 50 });
     }
   }
 

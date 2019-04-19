@@ -23,14 +23,14 @@ class MyProuducts extends Component {
     if (this.props.addedProducts.length > 0) {      
       ps = this.props.addedProducts.map(product => (
         <Product
-          key={product.id}
+          key={product._id}
           name={product.name}
           img={product.image}
           priceb={product.priceb}
           pricea={product.pricea}
-          del={() => this.props.del(product.id)}
-          view={() => this.props.showMore(product.id)}
-          id={`products/${product.id}`}
+          del={() => this.props.del(product._id)}
+          view={() => this.props.showMore(product._id)}
+          id={`products/${product._id}`}
         />
       ));
     }

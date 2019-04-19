@@ -9,24 +9,18 @@ const initialState = {
     pricea: 0,
     category: null
   },
-  logedInUserData:null,
+  logedInUserData: null,
   authorization: null,
   addedProducts: []
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-
+    //product's action handlers
     case actionTypes.GET_ALL:
       return {
         ...state,
         products: action.payload
-      };
-
-    case actionTypes.AUTH:
-      return {
-        ...state,
-        authorization: action.payload
       };
 
     case actionTypes.REMOVE:
@@ -55,6 +49,14 @@ const reducer = (state = initialState, action) => {
         products: newArray
       };
 
+    //user action handlers
+
+    case actionTypes.AUTH:
+      return {
+        ...state,
+        authorization: action.payload
+      };
+
     case actionTypes.GET_USER_PRODUCTS:
       return {
         ...state,
@@ -73,6 +75,14 @@ const reducer = (state = initialState, action) => {
       return {
         ...state
       };
+
+      //category action handlers
+      case actionTypes.GET_CATEGORY_PRODUCTS:
+      return{
+        ...state,
+        products:action.payload
+      }
+
     default:
       return state;
   }

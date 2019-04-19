@@ -4,9 +4,7 @@ import { connect } from "react-redux";
 
 
 class Navigation extends Component {
-  
   render() {
-
     let login = (
       <NavLink className="nav_link nav__link" to="/login">
         Login
@@ -274,19 +272,13 @@ class Navigation extends Component {
   }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     logout: () => dispatch(logOut())
-//   };
-// };
-
 const mapstateToProps = state => {
   return {
-    // signedUser: state.signedUser,
     authorization: state.authorization,
     user: state.logedInUserData
   };
 };
+
 export default connect(
   mapstateToProps,
   null

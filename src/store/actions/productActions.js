@@ -71,7 +71,6 @@ export const remove = id => {
 export const getById = id => {
   return dispatch => {
     Axios.get(`${baseUrl}/products/${id}`).then(res => {
-      console.log("get one", res.data);
       return dispatch({
         type: actions.SHOW_DETAILS,
         payload: res.data
