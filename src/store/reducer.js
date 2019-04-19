@@ -9,11 +9,12 @@ const initialState = {
     pricea: 0,
     category: null
   },
-  signedUser: {
-    token: null,
-    user: null
-  },
-  // signedUser: null,
+  // signedUser: {
+  //   token: null,
+  //   user: null
+  // },
+  logedInUserData:null,
+  authorization: null,
   addedProducts: []
 };
 
@@ -26,11 +27,11 @@ const reducer = (state = initialState, action) => {
         products: action.payload
       };
 
-    // case actionTypes.AUTH:
-    //   return {
-    //     ...state,
-    //     authorization: action.payload
-    //   };
+    case actionTypes.AUTH:
+      return {
+        ...state,
+        authorization: action.payload
+      };
 
     case actionTypes.REMOVE:
       const products = [...state.products];
@@ -69,7 +70,7 @@ const reducer = (state = initialState, action) => {
       localStorage.setItem("user-id", action.payload.user._id);
       return {
         ...state,
-        signedUser: action.payload
+        logedInUserData: action.payload.user
       };
 
     case actionTypes.REGISTER:

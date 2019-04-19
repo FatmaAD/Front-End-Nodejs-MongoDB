@@ -9,17 +9,17 @@ import Login from "./components/login/login";
 import MyProducts from "./components/my-products/products";
 import { connect } from "react-redux";
 import { getAll } from "./store/actions/productActions";
-// import { authenticate } from "./store/actions/userActions";
+import { authenticate } from "./store/actions/userActions";
 import "./App.scss";
 
 class App extends Component {
   componentDidMount() {
     this.props.getps();
-    // if (localStorage.getItem("token")) {
-    //   const token = localStorage.getItem("token");
-    //   const userId = localStorage.getItem("user-id");
-    //   this.props.getUserId(userId, token);
-    // }
+    if (localStorage.getItem("token")) {
+      const token = localStorage.getItem("token");
+      const userId = localStorage.getItem("user-id");
+      this.props.getUserId(userId, token);
+    }
   }
   render() {
     return (
@@ -49,14 +49,13 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    products: state.products,
-    // signedUser: state.signedUser
+    products: state.products
   };
 };
 const mapDispatchToProps = dispatch => {
   return {
     getps: () => dispatch(getAll()),
-    // getUserId: (userId, token) => dispatch(authenticate(userId, token))
+    getUserId: (userId, token) => dispatch(authenticate(userId, token))
   };
 };
 

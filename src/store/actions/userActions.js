@@ -18,9 +18,9 @@ export const login = credintials => {
   };
 };
 
-// export const authenticate = (userId, token) => {
-//   return { type: actions.AUTH, payload: { userId, token } };
-// };
+export const authenticate = (userId, token) => {
+  return { type: actions.AUTH, payload: { userId, token } };
+};
 
 export const logOut = () => {
   return { type: actions.LOG_OUT };

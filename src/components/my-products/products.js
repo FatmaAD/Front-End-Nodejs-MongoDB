@@ -13,7 +13,7 @@ class MyProuducts extends Component {
   componentDidMount() {
     const userID = localStorage.getItem("user-id");
     this.props.getAll(userID);
-    console.log("a7aaaaaaaa",this.props.addedProducts)
+    console.log("the props in my app",this.props.addedProducts)
   }
 
   render() {

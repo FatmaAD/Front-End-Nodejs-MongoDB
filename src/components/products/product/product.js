@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 const product = (props) => {
     let trash = null ;
-    if (props.signedUser) {
+    if (props.authorization && props.user) {
         trash = <a onClick={props.del} href="#"><i className="fas fa-trash-alt"></i></a>
     }
     return (
@@ -30,7 +30,9 @@ const product = (props) => {
 }
 const mapstateToProps = state => {
     return {
-        signedUser: state.signedUser
+        authorization: state.authorization,
+        user: state.logedInUserData
+
     };
   };
 
