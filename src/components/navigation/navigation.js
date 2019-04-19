@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-
+import { logOut } from "./../../store/actions/userActions";
 
 class Navigation extends Component {
   render() {
@@ -19,9 +19,10 @@ class Navigation extends Component {
     let userProducts = null;
     let add = null;
     let usr = null;
-
+    let logOut = null;
     if (this.props.authorization && this.props.user) {
       usr = "Hello" + " " + this.props.user.username;
+      logOut = <span onClick={() => this.props.logOut()}>Log Out</span>;
       add = (
         <NavLink to="/add" className="nav__inner-link">
           Add Product
@@ -144,7 +145,9 @@ class Navigation extends Component {
             </a>
             {/* <!-- user options --> */}
             <div className="header__user-options">
-             <strong> {usr} </strong> 
+              <strong style={{ paddingRight: "2rem" }}> {usr} </strong>
+              {logOut}
+
               {/* <!-- shopping card dropdown --> */}
               {/* <!-- dropdown--opened to open --> */}
               <div className="dropdown dropdown--left  ">
@@ -279,7 +282,13 @@ const mapstateToProps = state => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    logOut: () => dispatch(logOut())
+  };
+};
+
 export default connect(
   mapstateToProps,
-  null
+  mapDispatchToProps
 )(Navigation);

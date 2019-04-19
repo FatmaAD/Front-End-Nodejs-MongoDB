@@ -76,12 +76,19 @@ const reducer = (state = initialState, action) => {
         ...state
       };
 
-      //category action handlers
-      case actionTypes.GET_CATEGORY_PRODUCTS:
-      return{
+    case actionTypes.LOG_OUT:
+      return {
         ...state,
-        products:action.payload
-      }
+        logedInUserData: null,
+        authorization: null
+      };
+
+    //category action handlers
+    case actionTypes.GET_CATEGORY_PRODUCTS:
+      return {
+        ...state,
+        products: action.payload
+      };
 
     default:
       return state;

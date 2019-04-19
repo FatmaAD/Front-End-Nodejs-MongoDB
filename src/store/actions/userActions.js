@@ -23,6 +23,7 @@ export const authenticate = (userId, token) => {
 };
 
 export const logOut = () => {
+  localStorage.clear()
   return { type: actions.LOG_OUT };
 };
 
