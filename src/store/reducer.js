@@ -71,6 +71,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.LOGIN:
       localStorage.setItem("token", action.payload.token);
       localStorage.setItem("user-id", action.payload.user._id);
+      alert("You are logged in")
       return {
         ...state,
         logedInUserData: action.payload.user
