@@ -10,6 +10,7 @@ const sideMenu = props => {
         {/* <!-- search box --> */}
         <div className="search-box">
           <input
+            disabled="true"
             className="search-box__input"
             placeholder="Search..."
             type="text"
@@ -28,7 +29,7 @@ const sideMenu = props => {
           <ul className="list list--vr-separator">
             <li
               onClick={e => {
-                props.getOneCateg(e.target.innerText)
+                props.getOneCateg(e.target.innerText);
               }}
               className="link list__item"
             >
@@ -36,14 +37,14 @@ const sideMenu = props => {
               Bags
             </li>
             <li
-              onClick={(e) =>  props.getOneCateg(e.target.innerText)}
+              onClick={e => props.getOneCateg(e.target.innerText)}
               className="link list__item"
             >
               <i className="link__icon fas fa-angle-right" />
               Electronics
             </li>
             <li
-              onClick={(e) =>  props.getOneCateg(e.target.innerText)}
+              onClick={e => props.getOneCateg(e.target.innerText)}
               className="link list__item"
             >
               <i className="link__icon fas fa-angle-right" />
