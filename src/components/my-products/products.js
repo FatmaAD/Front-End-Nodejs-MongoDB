@@ -31,7 +31,7 @@ class MyProuducts extends Component {
           addedBy={product.addedBy}
           del={() => this.props.del(product._id)}
           view={() => this.props.showMore(product._id)}
-          id={`products/${product._id}`}
+          id={`${product._id}`}
         />
       ));
     }

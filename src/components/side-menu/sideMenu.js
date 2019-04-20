@@ -28,7 +28,7 @@ const sideMenu = props => {
           <ul className="list list--vr-separator">
             <li
               onClick={e => {
-                props.getOneCateg(e.target.innerText.toLowerCase())
+                props.getOneCateg(e.target.innerText)
               }}
               className="link list__item"
             >
@@ -36,14 +36,14 @@ const sideMenu = props => {
               Bags
             </li>
             <li
-              onClick={(e) =>  props.getOneCateg(e.target.innerText.toLowerCase())}
+              onClick={(e) =>  props.getOneCateg(e.target.innerText)}
               className="link list__item"
             >
               <i className="link__icon fas fa-angle-right" />
               Electronics
             </li>
             <li
-              onClick={(e) =>  props.getOneCateg(e.target.innerText.toLowerCase())}
+              onClick={(e) =>  props.getOneCateg(e.target.innerText)}
               className="link list__item"
             >
               <i className="link__icon fas fa-angle-right" />

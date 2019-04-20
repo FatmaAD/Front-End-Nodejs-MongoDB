@@ -28,6 +28,8 @@ class Navigation extends Component {
           Add Product
         </NavLink>
       );
+
+
       userProducts = (
         <NavLink
           className="nav_link nav__link"
@@ -36,6 +38,9 @@ class Navigation extends Component {
           My Products
         </NavLink>
       );
+
+
+      
       login = null;
       register = null;
     }

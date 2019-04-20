@@ -10,6 +10,7 @@ class addForm extends Component {
       name: "",
       description: "",
       pricea: "",
+      priceb:null,
       sale: null,
       category: null,
       addedBy: null
@@ -169,8 +170,9 @@ class addForm extends Component {
                   </div>
 
                   <div className="form-group">
-                    <label for="">Discount</label>
+                    <label for="">Price before</label>
                     <input
+                      onChange={(event)=>this.changeHandler(event.target.value, "priceb")}
                       className="form-control"
                       type="number"
                       disabled

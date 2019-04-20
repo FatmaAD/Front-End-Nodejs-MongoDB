@@ -15,7 +15,7 @@ const Products = props => {
       addedBy={product.addedBy}
       del={() => props.del(product.id)}
       view={() => props.showMore(product.id)}
-      id={`products/${product.id}`}
+      id={`${product.id}`}
     />
   ));
 

@@ -35,6 +35,7 @@ const reducer = (state = initialState, action) => {
       };
 
     case actionTypes.SHOW_DETAILS:
+    console.log(action.payload)
       return {
         ...state,
         selectedProduct: action.payload

@@ -32,9 +32,11 @@ const product = props => {
           </div>
         </a>
         <div className="crud-actions">
-          <NavLink to={props.id} onClick={props.view}>
+
+          <NavLink to={`/products/${props.id}`} onClick={props.view}>
             <i className="far fa-eye" />
           </NavLink>
+
           {trash}
         </div>
       </div>
