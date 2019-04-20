@@ -22,7 +22,7 @@ class Navigation extends Component {
     let logOut = null;
     if (this.props.authorization && this.props.user) {
       usr = "Hello" + " " + this.props.user.username;
-      logOut = <span onClick={() => this.props.logOut()}>Log Out</span>;
+     // logOut = <span onClick={() => this.props.logOut()}>Log Out</span>;
       add = (
         <NavLink to="/add" className="nav__inner-link">
           Add Product
