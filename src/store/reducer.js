@@ -35,7 +35,7 @@ const reducer = (state = initialState, action) => {
       };
 
     case actionTypes.SHOW_DETAILS:
-    console.log(action.payload)
+      console.log(action.payload);
       return {
         ...state,
         selectedProduct: action.payload
@@ -43,7 +43,11 @@ const reducer = (state = initialState, action) => {
 
     case actionTypes.ADD:
       let newArray = [...state.products];
-      newArray.push(action.payload);
+      let newproduct = action.payload;
+      console.log("el addddddd",action.payload);
+
+      newproduct.id = action.payload._id;
+      newArray.push(newproduct);
       alert("New Product added Successfully!");
       return {
         ...state,

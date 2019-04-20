@@ -88,7 +88,7 @@ export const add = product => {
     Axios.post(`${baseUrl}/products/`, product).then(res => { 
       return dispatch({ 
         type: actions.ADD,
-        payload: product
+        payload: res.data
       });
     });
   };
